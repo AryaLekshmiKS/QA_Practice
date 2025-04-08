@@ -2,10 +2,7 @@ package QA_Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 public class BtnAction_Tables_Dropdowns_iframes {
 
@@ -98,7 +95,13 @@ public class BtnAction_Tables_Dropdowns_iframes {
         driver.findElement(By.id("confirm-btn")).click();
         Thread.sleep(2000);
         driver.switchTo().alert().dismiss();
+
+        //File Upload
         
+        driver.findElement(By.id("file-upload-item")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("file_upload")).click();
+         uploadInput.sendKeys("C:\\Users\\Arya\\Documents\\sample.pdf");    
         
         
         driver.quit();
